@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main () {
+	int A[2], B[3], C[5], a; //Declarando meus vetores e inteiras
+	for (a = 0; a < 2; a++) { //Loop para ler os números
+		printf ("Digite seu numero da matriz A:\n"); //Sempre repita...
+		scanf ("%i", &A[a]);}  //Sempre passe esse valor para a variável
+	for (a = 0; a < 3; a++) { //Loop para ler os números
+		printf ("Digite seu numero da matriz B:\n"); //Sempre repita...
+		scanf ("%i", &B[a]);}  //Sempre passe esse valor para a variável
+	for (a = 0; a < 2; a++) { //Loop
+		C[a] = A[a]; //Passando de valores
+		C[a + 2] = B[a];} //Passando valores...
+	C[4] = B[2]; //Passando valores...
+	for (a = 0; a < 5; a++) { //Loop para ordenação
+		for (int b = a + 1; b < 5; b++) { //Loop...
+			if (C[a] < C[b]) { //Se C[a] menor que C[b], segue
+				int c = C[a]; //Troca de valores...
+				C[a] = C[b]; //Trocando valores
+				C[b] = c;}}} //Trocando mais valores...
+	printf ("Seus numeros em ordem decrescente:\n"); //Mostre essa mensagem para o usuário.
+	for (a = 0; a < 5; a++) { //Loop para exibição
+		printf ("%i\n", C[a]);} //mostre a variável para o usuário
+	return 0;} //Fim do programa... :/
